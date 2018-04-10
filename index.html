@@ -41,19 +41,7 @@
                 <div class="container">
                     <form id="chkform">
                         
-                        <div class="row bordered">
-                            <div id="IMAGES"></div>
-                            <div class="col s8 m11">
-                                <span class="left">Click no botão e tire fotos na posição <b>horizontal</b>.</span>
-                            </div>
-                            
-                            <div class="file-field col s4 m1">
-                                <label for="file" class="btn-large waves-effect waves-light blue right labelForFile">
-                                    <i class="fas fa-camera"></i></button>
-                                </label>
-                                <input type="file" id="file" accept="image/*" capture="camera" />
-                            </div>
-                        </div>
+                        <h1>Design Tests</h1>
                         
                         <!-- Load From data here! -->
                         <div class="row">
@@ -187,6 +175,29 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- Modal Structure -->
+                        <div id="modal1" class="modal bottom-sheet">
+                            <div class="modal-content">
+                                <div class="row">
+                                    <div class="col s12" id="IMAGES"></div>
+                                </div>
+                                
+                                <div class="row">
+                                    <div class="col s12">
+                                        <a href="#!" class="modal-action modal-close waves-effect waves-green btn red right">Salvar</a>
+                                        <label for="file" class="btn waves-effect waves-light blue right">
+                                            <i class="fas fa-camera"></i></button>
+                                        </label>
+                                        <input type="file" id="file" accept="image/*" capture="camera" />                                        
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="input-field col s12">
+                                        <textarea name="obs" class="materialize-textarea" data-length="500" placeholder="Faça uma descrição detalhada do problema encontrado nesse item..."></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <div class="row">
                             <div class="input-field col s12">
                                 <textarea name="JUSTIFICACAO" id="JUSTIFICACAO" class="materialize-textarea" data-length="500"></textarea>
@@ -196,7 +207,6 @@
                         <div class="row">
                             <div class="input-field col s12">
                                 <textarea name="MEDIDA_CORRETIVA" id="MEDIDA_CORRETIVA" class="materialize-textarea" data-length="500"></textarea>
-                                
                                 <label for="MEDIDA_CORRETIVA"><b>Medidas CORRETIVAS Imediatas</b><span>Indicar os itens a serem atendidos - "Faróis - Farol"</span></label>
                             </div>
                         </div>

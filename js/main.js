@@ -38,7 +38,9 @@ for(var i in c3box){
 
 // On click
 function c3boxClick(e){
-    navigator.vibrate(10);
+	if(navigator.vibrate){
+	    navigator.vibrate(10);
+	}
 
     var e = e.path[0].className.indexOf('c3box') == -1 ? e.path[1] : e.path[0];
     var led = e.querySelector('input[type=hidden]');

@@ -27,7 +27,7 @@ file.onchange = function(e) {
 }
 
 function swtChkAll(e){
-    navigator.vibrate(15);
+    navigator.vibrate(10);
     var led = e.querySelector('input[type=hidden]');
 
     if(led.value == "N") {

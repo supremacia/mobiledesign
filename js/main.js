@@ -64,6 +64,6 @@ function c3boxContext(e){
 	e.preventDefault();
 
 	var e = e.path[0].className.indexOf('c3box') == -1 ? e.path[1] : e.path[0];
-   	alert("funcionou!");
+   	alert("HELPER!\n\nAqui é possivel colocar uma ajuda, tirar fotos ESPECÍFICAS, criar uma anotação/observação sobre esse ítem, etc.");
 	return false;
 }

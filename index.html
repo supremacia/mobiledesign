@@ -1,0 +1,519 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>STYLES</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,900" rel="stylesheet">
+    <link rel="stylesheet" href="css/style_old.css">
+    <link rel="author" href="humans.txt">
+</head>
+
+<body>
+    <header>
+        <div>
+            <div class="title" id="page_title">Checklist</div>
+            <div id="menu"><i class="material-icons">menu</i></div>
+            <div id="submenu" class="row">
+                <div class="seta"></div>
+                <div class="col s12 m4">
+                    <ul>
+                        <li data-page="checklist"><i class="material-icons">check_box</i> Checklist</li>
+                        <li data-page="acidente"><i class="material-icons">local_hospital</i> Acidente</li>
+                    </ul>
+                    <hr>
+                </div>
+                <div class="col s12 m4">
+                    <ul>
+                        <li data-page="sincronizar"><i class="material-icons">backup</i> Sincronizar</li>
+                        <li data-page="dashboard"><i class="material-icons">insert_chart</i> Painel de Controle</li>
+                    </ul>
+                    <hr>
+                </div>
+                <div class="col s12 m4">
+                    <ul>
+                        <li data-page="login"><i class="material-icons">account_box</i> Login / Sair</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <form>
+            <div class="row">
+                <div class="input one">
+                    <label>Nome</label>
+                    <input type="text" />
+                </div>
+                <div class="input one">
+                    <label>Email</label>
+                    <input type="email" />
+                </div>
+            </div>
+
+            <div class="input one">
+                <label>Senha</label>
+                <input type="password" />
+            </div>
+
+            <div class="row">
+                <div class="input one">
+                    <label for="civil">Estado Cívil</label>
+                    <select id="civil">
+							<option value="0"></option>
+							<option value="1">Solteiro(a)</option>}
+							<option value="2">Casado(a)</option>}
+							<option value="3">Divrociado(a)</option>}
+							<option value="4">Viúvo(a)</option>}
+							<option value="5">Piranhando</option>}
+						</select>
+                </div>
+                <div class="input one">
+                    <label for="civil2">Estado Cívil</label>
+                    <select id="civil2">
+							<option value="0"></option>
+							<option value="1">Solteiro(a)</option>}
+							<option value="2">Casado(a)</option>}
+							<option value="3">Divrociado(a)</option>}
+							<option value="4">Viúvo(a)</option>}
+							<option value="5">Piranhando</option>}
+						</select>
+                </div>
+                <div class="input one">
+                <label>Senha</label>
+                <input type="password" />
+            </div>
+            </div>
+
+            <div class="input one">
+                <h2>Propriedade do Veículo</h2>
+                <input type="radio" name="dono" id="opt1">
+                <label for="opt1">Próprio</label>
+
+                <input type="radio" name="dono" id="opt2" checked>
+                <label for="opt2">Não é da sua conta</label>
+
+                <input type="radio" name="dono" id="opt3">
+                <label for="opt3">Alugado</label>
+                <input type="radio" name="dono" id="opt31">
+                <label for="opt31">Roubado <small>(e daí?)</small></label>
+            </div>
+
+            <div class="input one">
+                <h2>Checlist do Veículo</h2>
+                
+
+                <table class="chktable">
+            <tr>
+                <th>Sistema Elétrico</th>
+                <th>Bom</th>
+                <th> -- </th>
+                <th>Ruím</th>
+            </tr>
+            <tr>
+                <td>Buzina</td>
+                <td><input type="radio" name="BUZINA" id="BUZINA1" value="B">
+                <label for="BUZINA1"></label></td>
+                <td><input type="radio" name="BUZINA" id="BUZINA2" value="N" checked="true">
+                <label for="BUZINA2"></label></td>
+                <td><input type="radio" name="BUZINA" id="BUZINA3" value="R">
+                <label for="BUZINA3"></label></td>
+            </tr>
+            <tr>
+                <td>Faróis</td>
+                <td><input type="radio" name="FAROL" id="FAROL1" value="B">
+                <label for="FAROL1"></label></td>
+                <td><input type="radio" name="FAROL" id="FAROL2" value="N" checked="true">
+                <label for="FAROL2"></label></td>
+                <td><input type="radio" name="FAROL" id="FAROL3" value="R">
+                <label for="FAROL3"></label></td>
+            </tr>
+            <tr>
+                <td>Luz de Freio</td>
+                <td><input type="radio" name="LUZ_FREIO" id="LUZ_FREIO1" value="B">
+                <label for="LUZ_FREIO1"></label></td>
+                <td><input type="radio" name="LUZ_FREIO" id="LUZ_FREIO2" value="N" checked="true">
+                <label for="LUZ_FREIO2"></label></td>
+                <td><input type="radio" name="LUZ_FREIO" id="LUZ_FREIO3" value="R">
+                <label for="LUZ_FREIO3"></label></td>
+            </tr>
+            <tr>
+                <td>Lanterna</td>
+                <td><input type="radio" name="LANTERNA" id="LANTERNA1" value="B">
+                <label for="LANTERNA1"></label></td>
+                <td><input type="radio" name="LANTERNA" id="LANTERNA2" value="N" checked="true">
+                <label for="LANTERNA2"></label></td>
+                <td><input type="radio" name="LANTERNA" id="LANTERNA3" value="R">
+                <label for="LANTERNA3"></label></td>
+            </tr>
+            <tr>
+                <td>Luz de Ré</td>
+                <td><input type="radio" name="LUZ_RE" id="LUZ_RE1" value="B">
+                <label for="LUZ_RE1"></label></td>
+                <td><input type="radio" name="LUZ_RE" id="LUZ_RE2" value="N"  checked="true">
+                <label for="LUZ_RE2"></label></td>
+                <td><input type="radio" name="LUZ_RE" id="LUZ_RE3" value="R">
+                <label for="LUZ_RE3"></label></td>
+            </tr>
+            <tr>
+                <td>Pisca Alerta</td>
+                <td><input type="radio" name="PISCA_ALERTA" id="PISCA_ALERTA1" value="B">
+                <label for="PISCA_ALERTA1"></label></td>
+                <td><input type="radio" name="PISCA_ALERTA" id="PISCA_ALERTA2" value="N"  checked="true">
+                <label for="PISCA_ALERTA2"></label></td>
+                <td><input type="radio" name="PISCA_ALERTA" id="PISCA_ALERTA3" value="R">
+                <label for="PISCA_ALERTA3"></label></td>
+            </tr>
+            <tr>
+                <td>Setas de Direção</td>
+                <td><input type="radio" name="SETA" id="SETA1" value="B">
+                <label for="SETA1"></label></td>
+                <td><input type="radio" name="SETA" id="SETA2" value="N"  checked="true">
+                <label for="SETA2"></label></td>
+                <td><input type="radio" name="SETA" id="SETA3" value="R">
+                <label for="SETA3"></label></td>
+            </tr>
+        </table>
+
+        <table class="chktable">
+            <tr>
+                <th>Carenagem</th>
+                <th>Bom</th>
+                <th> -- </th>
+                <th>Ruím</th>
+            </tr>
+            <tr>
+                <td>Balaústre</td>
+                <td><input type="radio" name="BALAUSTRE" id="BALAUSTRE1" value="B">
+                <label for="BALAUSTRE1"></label></td>
+                <td><input type="radio" name="BALAUSTRE" id="BALAUSTRE2" value="N"  checked="true">
+                <label for="BALAUSTRE2"></label></td>
+                <td><input type="radio" name="BALAUSTRE" id="BALAUSTRE3" value="R">
+                <label for="BALAUSTRE3"></label></td>
+            </tr>
+            <tr>
+                <td>Bancos</td>
+                <td><input type="radio" name="BANCO" id="BANCO1" value="B">
+                <label for="BANCO1"></label></td>
+                <td><input type="radio" name="BANCO" id="BANCO2" value="N"  checked="true">
+                <label for="BANCO2"></label></td>
+                <td><input type="radio" name="BANCO" id="BANCO3" value="R">
+                <label for="BANCO3"></label></td>
+            </tr>
+            <tr>
+                <td>Cinto de Segurança</td>
+                <td><input type="radio" name="CINTO_SEGURANCA" id="CINTO_SEGURANCA1" value="B">
+                <label for="CINTO_SEGURANCA1"></label></td>
+                <td><input type="radio" name="CINTO_SEGURANCA" id="CINTO_SEGURANCA2" value="N"  checked="true">
+                <label for="CINTO_SEGURANCA2"></label></td>
+                <td><input type="radio" name="CINTO_SEGURANCA" id="CINTO_SEGURANCA3" value="R">
+                <label for="CINTO_SEGURANCA3"></label></td>
+            </tr>
+            <tr>
+                <td>Encosto de Cabeça</td>
+                <td><input type="radio" name="ENCOSTO_CABECA" id="ENCOSTO_CABECA1" value="B">
+                <label for="ENCOSTO_CABECA1"></label></td>
+                <td><input type="radio" name="ENCOSTO_CABECA" id="ENCOSTO_CABECA2" value="N"  checked="true">
+                <label for="ENCOSTO_CABECA2"></label></td>
+                <td><input type="radio" name="ENCOSTO_CABECA" id="ENCOSTO_CABECA3" value="R">
+                <label for="ENCOSTO_CABECA3"></label></td>
+            </tr>
+            <tr>
+                <td>Esguicho da Água</td>
+                <td><input type="radio" name="ESQUICHO_AGUA" id="ESQUICHO_AGUA1" value="B">
+                <label for="ESQUICHO_AGUA1"></label></td>
+                <td><input type="radio" name="ESQUICHO_AGUA" id="ESQUICHO_AGUA2" value="N"  checked="true">
+                <label for="ESQUICHO_AGUA2"></label></td>
+                <td><input type="radio" name="ESQUICHO_AGUA" id="ESQUICHO_AGUA3" value="R">
+                <label for="ESQUICHO_AGUA3"></label></td>
+            </tr>
+            <tr>
+                <td>Espelho Restrovisor</td>
+                <td><input type="radio" name="RETROVISOR" id="RETROVISOR1" value="B">
+                <label for="RETROVISOR1"></label></td>
+                <td><input type="radio" name="RETROVISOR" id="RETROVISOR2" value="N"  checked="true">
+                <label for="RETROVISOR2"></label></td>
+                <td><input type="radio" name="RETROVISOR" id="RETROVISOR3" value="R">
+                <label for="RETROVISOR3"></label></td>
+            </tr>
+            <tr>
+                <td>Limpador de Para-brisa</td>
+                <td><input type="radio" name="LIMPADOR_PARABRISA" id="LIMPADOR_PARABRISA1" value="B">
+                <label for="LIMPADOR_PARABRISA1"></label></td>
+                <td><input type="radio" name="LIMPADOR_PARABRISA" id="LIMPADOR_PARABRISA2" value="N"  checked="true">
+                <label for="LIMPADOR_PARABRISA2"></label></td>
+                <td><input type="radio" name="LIMPADOR_PARABRISA" id="LIMPADOR_PARABRISA3" value="R">
+                <label for="LIMPADOR_PARABRISA3"></label></td>
+            </tr>
+            <tr>
+                <td>Maçanetas, Travas e Manivelas dos Vidros</td>
+                <td><input type="radio" name="MACANETA" id="MACANETA1" value="B">
+                <label for="MACANETA1"></label></td>
+                <td><input type="radio" name="MACANETA" id="MACANETA2" value="N"  checked="true">
+                <label for="MACANETA2"></label></td>
+                <td><input type="radio" name="MACANETA" id="MACANETA3" value="R">
+                <label for="MACANETA3"></label></td>
+            </tr>
+            <tr>
+                <td>Painel de Instrumentos</td>
+                <td><input type="radio" name="PAINEL_INSTRUMENTO" id="PAINEL_INSTRUMENTO1" value="B">
+                <label for="PAINEL_INSTRUMENTO1"></label></td>
+                <td><input type="radio" name="PAINEL_INSTRUMENTO" id="PAINEL_INSTRUMENTO2" value="N"  checked="true">
+                <label for="PAINEL_INSTRUMENTO2"></label></td>
+                <td><input type="radio" name="PAINEL_INSTRUMENTO" id="PAINEL_INSTRUMENTO3" value="R">
+                <label for="PAINEL_INSTRUMENTO3"></label></td>
+            </tr>
+            <tr>
+                <td>Portas</td>
+                <td><input type="radio" name="PORTA" id="PORTA1" value="B">
+                <label for="PORTA1"></label></td>
+                <td><input type="radio" name="PORTA" id="PORTA2" value="N"  checked="true">
+                <label for="PORTA2"></label></td>
+                <td><input type="radio" name="PORTA" id="PORTA3" value="R">
+                <label for="PORTA3"></label></td>
+            </tr>
+            <tr>
+                <td>Quebra Sol</td>
+                <td><input type="radio" name="QUEBRA_SOL" id="QUEBRA_SOL1" value="B">
+                <label for="QUEBRA_SOL1"></label></td>
+                <td><input type="radio" name="QUEBRA_SOL" id="QUEBRA_SOL2" value="N"  checked="true">
+                <label for="QUEBRA_SOL2"></label></td>
+                <td><input type="radio" name="QUEBRA_SOL" id="QUEBRA_SOL3" value="R">
+                <label for="QUEBRA_SOL3"></label></td>
+            </tr>
+            <tr>
+                <td>Vidro Para-brisas</td>
+                <td><input type="radio" name="VIDRO_BRISA" id="VIDRO_BRISA1" value="B">
+                <label for="VIDRO_BRISA1"></label></td>
+                <td><input type="radio" name="VIDRO_BRISA" id="VIDRO_BRISA2" value="N"  checked="true">
+                <label for="VIDRO_BRISA2"></label></td>
+                <td><input type="radio" name="VIDRO_BRISA" id="VIDRO_BRISA3" value="R">
+                <label for="VIDRO_BRISA3"></label></td>
+            </tr>
+            <tr>
+                <td>Vidro Traseiro</td>
+                <td><input type="radio" name="VIDRO_TRASEIRO" id="VIDRO_TRASEIRO1" value="B">
+                <label for="VIDRO_TRASEIRO1"></label></td>
+                <td><input type="radio" name="VIDRO_TRASEIRO" id="VIDRO_TRASEIRO2" value="N"  checked="true">
+                <label for="VIDRO_TRASEIRO2"></label></td>
+                <td><input type="radio" name="VIDRO_TRASEIRO" id="VIDRO_TRASEIRO3" value="R">
+                <label for="VIDRO_TRASEIRO3"></label></td>
+            </tr>
+        </table>
+
+        <table class="chktable">
+            <tr>
+                <th>Freios</th>
+                <th>Bom</th>
+                <th> -- </th>
+                <th>Ruím</th>
+            </tr>
+            <tr>
+                <td>Funcionamento</td>
+                <td><input type="radio" name="FREIO" id="FREIO1" value="B">
+                <label for="FREIO1"></label></td>
+                <td><input type="radio" name="FREIO" id="FREIO2" value="N"  checked="true">
+                <label for="FREIO2"></label></td>
+                <td><input type="radio" name="FREIO" id="FREIO3" value="R">
+                <label for="FREIO3"></label></td>
+            </tr>
+            <tr>
+                <td>Freio de Segurança</td>
+                <td><input type="radio" name="FREIO_SEGURANCA" id="FREIO_SEGURANCA1" value="B">
+                <label for="FREIO_SEGURANCA1"></label></td>
+                <td><input type="radio" name="FREIO_SEGURANCA" id="FREIO_SEGURANCA2" value="N"  checked="true">
+                <label for="FREIO_SEGURANCA2"></label></td>
+                <td><input type="radio" name="FREIO_SEGURANCA" id="FREIO_SEGURANCA3" value="R">
+                <label for="FREIO_SEGURANCA3"></label></td>
+            </tr>
+        </table>
+
+        <table class="chktable">
+            <tr>
+                <th>Rodas</th>
+                <th>Bom</th>
+                <th> -- </th>
+                <th>Ruím</th>
+            </tr>
+            <tr>
+                <td>Aro & Calota</td>
+                <td><input type="radio" name="CALOTA" id="CALOTA1" value="B">
+                <label for="CALOTA1"></label></td>
+                <td><input type="radio" name="CALOTA" id="CALOTA2" value="N"  checked="true">
+                <label for="CALOTA2"></label></td>
+                <td><input type="radio" name="CALOTA" id="CALOTA3" value="R">
+                <label for="CALOTA3"></label></td>
+            </tr>
+            <tr>
+                <td>Estado Geral do Pneu</td>
+                <td><input type="radio" name="PNEU" id="PNEU1" value="B">
+                <label for="PNEU1"></label></td>
+                <td><input type="radio" name="PNEU" id="PNEU2" value="N"  checked="true">
+                <label for="PNEU2"></label></td>
+                <td><input type="radio" name="PNEU" id="PNEU3" value="R">
+                <label for="PNEU3"></label></td>
+            </tr>
+            <tr>
+                <td>Estepe</td>
+                <td><input type="radio" name="STEPE" id="STEPE1" value="B">
+                <label for="STEPE1"></label></td>
+                <td><input type="radio" name="STEPE" id="STEPE2" value="N"  checked="true">
+                <label for="STEPE2"></label></td>
+                <td><input type="radio" name="STEPE" id="STEPE3" value="R">
+                <label for="STEPE3"></label></td>
+            </tr>
+        </table>
+
+        <table class="chktable">
+            <tr>
+                <th>Equipamentos</th>
+                <th>Bom</th>
+                <th> -- </th>
+                <th>Ruím</th>
+            </tr>
+            <tr>
+                <td>Chave de Rodas</td>
+                <td><input type="radio" name="CHAVE_RODA" id="CHAVE_RODA1" value="B">
+                <label for="CHAVE_RODA1"></label></td>
+                <td><input type="radio" name="CHAVE_RODA" id="CHAVE_RODA2" value="N"  checked="true">
+                <label for="CHAVE_RODA2"></label></td>
+                <td><input type="radio" name="CHAVE_RODA" id="CHAVE_RODA3" value="R">
+                <label for="CHAVE_RODA3"></label></td>
+            </tr>
+            <tr>
+                <td>Extintor</td>
+                <td><input type="radio" name="EXTINTOR" id="EXTINTOR1" value="B">
+                <label for="EXTINTOR1"></label></td>
+                <td><input type="radio" name="EXTINTOR" id="EXTINTOR2" value="N"  checked="true">
+                <label for="EXTINTOR2"></label></td>
+                <td><input type="radio" name="EXTINTOR" id="EXTINTOR3" value="R">
+                <label for="EXTINTOR3"></label></td>
+            </tr>
+            <tr>
+                <td>Macaco</td>
+                <td><input type="radio" name="MACACO" id="MACACO1" value="B">
+                <label for="MACACO1"></label></td>
+                <td><input type="radio" name="MACACO" id="MACACO2" value="N"  checked="true">
+                <label for="MACACO2"></label></td>
+                <td><input type="radio" name="MACACO" id="MACACO3" value="R">
+                <label for="MACACO3"></label></td>
+            </tr>
+            <tr>
+                <td>Triângulo</td>
+                <td><input type="radio" name="TRIANGULO" id="TRIANGULO1" value="B">
+                <label for="TRIANGULO1"></label></td>
+                <td><input type="radio" name="TRIANGULO" id="TRIANGULO2" value="N"  checked="true">
+                <label for="TRIANGULO2"></label></td>
+                <td><input type="radio" name="TRIANGULO" id="TRIANGULO3" value="R">
+                <label for="TRIANGULO3"></label></td>
+            </tr>
+        </table>
+
+        <table class="chktable">
+            <tr>
+                <th>Outros Ítens</th>
+                <th>Bom</th>
+                <th> -- </th>
+                <th>Ruím</th>
+            </tr>
+            <tr>
+                <td>Documentação do Motorista</td>
+                <td><input type="radio" name="DOCUMENTO_MOTORISTA" id="DOCUMENTO_MOTORISTA1" value="B">
+                <label for="DOCUMENTO_MOTORISTA1"></label></td>
+                <td><input type="radio" name="DOCUMENTO_MOTORISTA" id="DOCUMENTO_MOTORISTA2" value="N"  checked="true">
+                <label for="DOCUMENTO_MOTORISTA2"></label></td>
+                <td><input type="radio" name="DOCUMENTO_MOTORISTA" id="DOCUMENTO_MOTORISTA3" value="R">
+                <label for="DOCUMENTO_MOTORISTA3"></label></td>
+            </tr>
+            <tr>
+                <td>Documentação do Veículo</td>
+                <td><input type="radio" name="DOCUMENTO_VEICULO" id="DOCUMENTO_VEICULO1" value="B">
+                <label for="DOCUMENTO_VEICULO1"></label></td>
+                <td><input type="radio" name="DOCUMENTO_VEICULO" id="DOCUMENTO_VEICULO2" value="N"  checked="true">
+                <label for="DOCUMENTO_VEICULO2"></label></td>
+                <td><input type="radio" name="DOCUMENTO_VEICULO" id="DOCUMENTO_VEICULO3" value="R">
+                <label for="DOCUMENTO_VEICULO3"></label></td>
+            </tr>
+            <tr>
+                <td>Escapamento</td>
+                <td><input type="radio" name="ESCAPAMENTO" id="ESCAPAMENTO1" value="B">
+                <label for="ESCAPAMENTO1"></label></td>
+                <td><input type="radio" name="ESCAPAMENTO" id="ESCAPAMENTO2" value="N"  checked="true">
+                <label for="ESCAPAMENTO2"></label></td>
+                <td><input type="radio" name="ESCAPAMENTO" id="ESCAPAMENTO3" value="R">
+                <label for="ESCAPAMENTO3"></label></td>
+            </tr>
+            <tr>
+                <td>Limpeza & Vazamentos</td>
+                <td><input type="radio" name="LIMPEZA" id="LIMPEZA1" value="B">
+                <label for="LIMPEZA1"></label></td>
+                <td><input type="radio" name="LIMPEZA" id="LIMPEZA2" value="N"  checked="true">
+                <label for="LIMPEZA2"></label></td>
+                <td><input type="radio" name="LIMPEZA" id="LIMPEZA3" value="R">
+                <label for="LIMPEZA3"></label></td>
+            </tr>
+            <tr>
+                <td>Pintura & Conservação</td>
+                <td><input type="radio" name="PINTURA" id="PINTURA1" value="B">
+                <label for="PINTURA1"></label></td>
+                <td><input type="radio" name="PINTURA" id="PINTURA2" value="N"  checked="true">
+                <label for="PINTURA2"></label></td>
+                <td><input type="radio" name="PINTURA" id="PINTURA3" value="R">
+                <label for="PINTURA3"></label></td>
+            </tr>
+            <tr>
+                <td>Adesivação</td>
+                <td><input type="radio" name="ADESIVACAO" id="ADESIVACAO1" value="B">
+                <label for="ADESIVACAO1"></label></td>
+                <td><input type="radio" name="ADESIVACAO" id="ADESIVACAO2" value="N"  checked="true">
+                <label for="ADESIVACAO2"></label></td>
+                <td><input type="radio" name="ADESIVACAO" id="ADESIVACAO3" value="R">
+                <label for="ADESIVACAO3"></label></td>
+            </tr>
+        </table>
+
+
+
+            </div>
+            <img src="" id="image" />
+            <button type="button" onclick="ocr()">OCR</button>
+            <div class="row">
+                <div class="col s12 input">
+                    <textarea id="textarea1"></textarea>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input">
+                    <label for="file">Anexar arquivo (max 2M)</label>
+                    <input type="file" id="file" accept="image/*" capture="camera" />
+                </div>
+            </div>
+
+
+            <h2>Descrição</h2>
+            <div class="input one">
+                <label for="texto">Descrição</label> 
+                <textarea name="texto">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</textarea>
+            </div>
+            <div class="input one">
+                <input type="checkbox" id="contrato">
+                <label for="contrato">Li e concordo com os termos de uso</label>
+            </div>
+            <div class="input">
+                <button type="reset" class="blu">Cancelar</button>
+                <button type="submit">Salvar</button>
+            </div>
+
+        </form>
+    </main>
+    <footer></footer>
+
+    <script src="js/jquery.min.js"></script>
+    <script src='https://cdn.rawgit.com/naptha/tesseract.js/1.0.10/dist/tesseract.js'></script>
+    <script src="js/main_old.js"></script>
+</body>
+
+</html>

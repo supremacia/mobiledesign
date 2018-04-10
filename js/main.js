@@ -29,6 +29,7 @@ const IMG = document.getElementById('IMAGES');
 function swtChkAll(e){
 
     console.log(e);
+    navigator.vibrate(15);
 
     TMP = e;
 
@@ -46,7 +47,7 @@ function swtChkAll(e){
         return;
     }
     if(led.value == "B") {
-    	txt.style.color = "#700";
+    	txt.style.color = "#F00";
     	e.style.border = "1px solid #D00";
         led.value = "R";
         val.className = 'ruim';

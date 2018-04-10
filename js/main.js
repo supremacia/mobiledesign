@@ -17,47 +17,32 @@ const FILE = document.getElementById('file');
 const IMG = document.getElementById('IMAGES');
 
 
-    // function onchange FILE
-    file.onchange = function(e) {
-        var r = new FileReader();
-        r.readAsDataURL(FILE.files[0]);
-        r.onloadend = function() {
-        	IMG.innerHTML = '<img src="'+r.result+'" >';
-        }
+// function onchange FILE
+file.onchange = function(e) {
+    var r = new FileReader();
+    r.readAsDataURL(FILE.files[0]);
+    r.onloadend = function() {
+    	IMG.innerHTML = '<img src="'+r.result+'" >';
     }
+}
 
 function swtChkAll(e){
-
-    console.log(e);
     navigator.vibrate(15);
-
-    TMP = e;
-
-    var txt = e.querySelector('div.c3boxText');
     var led = e.querySelector('input[type=hidden]');
-    var val = e.querySelector('button');
-
-    console.log(led);
 
     if(led.value == "N") {
-    	txt.style.color = "#070";
-    	e.style.border = "1px solid #0D0";
         led.value = "B";
-        val.className = 'bom';
+        e.className = 'c3box bom';
         return;
     }
     if(led.value == "B") {
-    	txt.style.color = "#F00";
-    	e.style.border = "1px solid #D00";
         led.value = "R";
-        val.className = 'ruim';
+        e.className = 'c3box ruim';
         return;
     }
     if(led.value == "R") {
-    	txt.style.color = "#AAA";
-    	e.style.border = "none";
         led.value = "N";
-        val.className = 'disabled';
+        e.className = 'c3box disabled';
         return;
     }
 }

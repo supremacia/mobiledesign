@@ -20,12 +20,15 @@ body {
     padding: 10px;
     margin:10px 0;
     min-height: 60px !important;
-    border-radius:5px;
+    border-radius:3px;
+    border: 1px solid #DDD;
     box-shadow: 1px 2px 15px rgba(0,0,0,0.1), 0 0 1px rgba(0,0,0,0.3);
     cursor: pointer;
 }
-.c3boxText {
-    width: calc(100% - 60px);
+.c3box span,
+.c3box h4 {
+	font-size:.9em;
+    width: calc(100% - 20px);
     display:inline-block;
 }
 .c3box h4 {
@@ -34,37 +37,51 @@ body {
     padding:0;
     margin:0;     
 }
-.c3boxLed {
-    display: inline-block;
-    height: 60px !important;
-    text-align:center;
-    padding:20px 0;
-    width: 70px;
-    margin: -10px -10px 0 0;
-    position: absolute;
-}
-.c3boxLed button {
+.c3box button {
     width:20px;
     height:20px;
+    margin: -20px 0 0 0;
+    float:right;
     border-radius:50%;
-}
-.disabled {
     border:1px solid #ccc;
     background-image: radial-gradient(circle farthest-corner at 7px 6px , #fff 10%, #eee 50%, #999 95%);
     box-shadow: 0 1px 5px #FFF;
 }
-.ruim {
-    border: 2px solid #700;
+/* --------------------------- c3box N/A (disabled) --- */
+.c3box.disabled,
+.c3box.disabled h4 {	
+	color:  #89A;
+	font-weight: normal;
+}
+.c3box.disabled{
+	border: 1px solid #FFF;
+}
+/* --------------------------- c3box RUIM --- */
+.c3box.ruim {
+	border: 1px solid #F00;
+}
+.c3box.ruim .c3boxText {
+	color:  #C00;
+}
+.c3box.ruim button {
+	border: 2px solid #700;
     box-shadow: 0 1px 5px #f00;
     background-image: radial-gradient(circle farthest-corner at 7px 6px , #fff 10%, #ff0000 50%, #5a0723 95%);
 }
-.bom {
-    border: 2px solid #050;
+/* --------------------------- c3box BOM --- */
+.c3box.bom {
+	border: 1px solid #0D0;
+}
+.c3box.bom .c3boxText {
+	color:  #060;
+}
+.c3box.bom button {
+	border: 2px solid #050;
     box-shadow: 0 1px 5px #080;
-    background-image: radial-gradient(circle farthest-corner at 7px 6px , #fff 10%, #99ff00 50%, #5a0723 95%);    
+    background-image: radial-gradient(circle farthest-corner at 7px 6px , #fff 10%, #99ff00 50%, #5a0723 95%);
 }
 
-
+/* --------------------------- EXTRA --- */
 #file {
 	display: none;
 }

@@ -20,7 +20,7 @@ body {
     padding: 10px;
     margin:10px 0;
     min-height: 60px !important;
-    border-radius:3px;
+    border-radius:0px;
     border: 1px solid #DDD;
     box-shadow: 1px 2px 15px rgba(0,0,0,0.1), 0 0 1px rgba(0,0,0,0.3);
     cursor: pointer;
@@ -40,7 +40,7 @@ body {
 .c3box button {
     width:20px;
     height:20px;
-    margin: -20px 0 0 0;
+    margin: -11px 0 0 0;
     float:right;
     border-radius:50%;
     border:1px solid #ccc;
@@ -50,7 +50,7 @@ body {
 /* --------------------------- c3box N/A (disabled) --- */
 .c3box.disabled,
 .c3box.disabled h4 {	
-	color:  #89A;
+	color:  #678;
 	font-weight: normal;
 }
 .c3box.disabled{

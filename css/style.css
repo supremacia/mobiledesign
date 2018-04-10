@@ -50,7 +50,7 @@ body {
 /* --------------------------- c3box N/A (disabled) --- */
 .c3box.disabled,
 .c3box.disabled h4 {	
-	color:  #678;
+	color:  #345;
 	font-weight: normal;
 }
 .c3box.disabled{

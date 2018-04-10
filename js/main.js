@@ -46,3 +46,10 @@ function swtChkAll(e){
         return;
     }
 }
+
+var c3box = document.querySelectorAll('.c3box')[1];
+c3box.oncontextmenu = function(e){
+	e.preventDefault();
+   alert(e);
+return false;
+}

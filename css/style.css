@@ -20,10 +20,11 @@ body {
     padding: 10px;
     margin:10px 0;
     min-height: 60px !important;
-    border-radius:0px;
-    border: 1px solid #DDD;
+    border-radius:0;
+    border: 2px solid #EEE;
     box-shadow: 1px 2px 15px rgba(0,0,0,0.1), 0 0 1px rgba(0,0,0,0.3);
     cursor: pointer;
+    transition: 1s;
 }
 .c3box span,
 .c3box h4 {
@@ -53,12 +54,9 @@ body {
 	color:  #345;
 	font-weight: normal;
 }
-.c3box.disabled{
-	border: 1px solid #FFF;
-}
 /* --------------------------- c3box RUIM --- */
 .c3box.ruim {
-	border: 1px solid #F00;
+	border: 2px solid #F00;
 }
 .c3box.ruim .c3boxText {
 	color:  #C00;
@@ -70,7 +68,7 @@ body {
 }
 /* --------------------------- c3box BOM --- */
 .c3box.bom {
-	border: 1px solid #0D0;
+	border: 2px solid #0D0;
 }
 .c3box.bom .c3boxText {
 	color:  #060;

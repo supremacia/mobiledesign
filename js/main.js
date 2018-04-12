@@ -15,7 +15,18 @@ var TMP,DB,USER,CONNECT,GET_DATAPACK_URL="https://delivre.tk/datapack",CHECKLIST
 
 const FILE = document.getElementById('file');
 //const IMG = document.getElementById('IMAGES');
+const AUDIO = {
+	'click': new Audio('sound/click.mp3'),
+	'modal': new Audio('sound/modal.mp3'),
+	'glass': new Audio('sound/glass.mp3')
+}
 
+
+//Clicando sobre os Radios, tabela
+$('table input[type=radio]').on('click', function(){
+	AUDIO.glass.play();
+	console.log('clicacdo')
+})
 
 // function onchange FILE
 file.onchange = function(e) {
@@ -28,6 +39,9 @@ file.onchange = function(e) {
 }
 
 function removeImage2(id){
+	AUDIO.glass.play();
+	navigator.vibrate(10);
+
 	$('#'+id).remove();
 }
 
@@ -46,6 +60,7 @@ function c3boxClick(e){
 	if(navigator.vibrate){
 	    navigator.vibrate(10);
 	}
+	AUDIO.click.play();
 
     var e = e.path[0].className.indexOf('c3box') == -1 ? e.path[1] : e.path[0];
     var led = e.querySelector('input[type=hidden]');
@@ -73,11 +88,13 @@ function c3boxContext(e){
 	var e = e.path[0].className.indexOf('c3box') == -1 ? e.path[1] : e.path[0];
 
 	$('#modal1').modal('open');
-   	//alert("HELPER!\n\nAqui é possivel colocar uma ajuda, tirar fotos ESPECÍFICAS, criar uma anotação/observação sobre esse ítem, etc.");
 	return false;
 }
 
 
 {
-	$('.modal').modal();
+	$('.modal').modal({
+		ready: function() {AUDIO.modal.play()},
+		complete: function() {AUDIO.glass.play()}
+	});
 }

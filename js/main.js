@@ -11,11 +11,10 @@ function atualizaDisplay(){if("dashboard"!=CURRENT_PAGE)return!1;DB.config.get("
 var CHECKLIST_DATA={id_empresa:"0",id_veiculo:"0",id_motorista:"0",data:"0",data_digitada:"0",conferente:"",km:"0",numero_frota:"0",tipo_check:"",alarme_re:"N",buzina:"N",farol:"N",luz_freio:"N",lanterna:"N",luz_re:"N",pisca_alerta:"N",seta:"N",balaustre:"N",banco:"N",cinto_seguranca:"N",encosto_cabeca:"N",esquicho_agua:"N",retrovisor:"N",limpador_parabrisa:"N",macaneta:"N",porta:"N",quebra_sol:"N",vidro_brisa:"N",vidro_traseiro:"N",estribo:"N",freio:"N",freio_seguranca:"N",calota:"N",pneu:"N",stepe:"N",barra_reboque:"N",calco_roda:"N",chave_roda:"N",extintor:"N",macaco:"N",triangulo:"N",documento_motorista:"N",documento_veiculo:"N",escapamento:"N",limpeza:"N",pintura:"N",adesivacao:"N",suspensao_traseira:"N",lataria:"N",raio:"N",bau:"N",descanso:"N",pedaleira:"N",manete:"N",antena:"N",painel_instrumento:"N",resultado:"",justificacao:"",medida_corretiva:"",medida_preventiva:"",latitude:"0",longitude:"0"},CHECKLIST_IMAGES=Array();function saveChecklist(a){if(""==CHECKLIST_ID)return blackglass("Erro no ID do formulário<br>Reinicie o aplicativo!"),!1;CHECKLIST_DATA.localid=CHECKLIST_ID,CHECKLIST_DATA.id_empresa=$("#ID_EMPRESA").val(),CHECKLIST_DATA.id_veiculo=$("#ID_VEICULO").val(),CHECKLIST_DATA.id_motorista=$("#ID_MOTORISTA").val(),CHECKLIST_DATA.data=geraData("data"),CHECKLIST_DATA.data_digitada=geraData("full"),CHECKLIST_DATA.conferente=USER.getLogin(),CHECKLIST_DATA.km=$("#KM").val(),CHECKLIST_DATA.numero_frota="1",CHECKLIST_DATA.tipo_check=$("#TIPO_CHECK").val(),CHECKLIST_DATA.resultado=CHECKLIST_VALIDATE,CHECKLIST_DATA.justificacao=$("#JUSTIFICACAO").val().substr(0,500),CHECKLIST_DATA.medida_corretiva=$("#MEDIDA_CORRETIVA").val().substr(0,500),CHECKLIST_DATA.medida_preventiva=$("#MEDIDA_PREVENTIVA").val().substr(0,500),navigator.geolocation.getCurrentPosition(function(a){CHECKLIST_DATA.latitude=a.coords.latitude,CHECKLIST_DATA.longitude=a.coords.longitude});var e=$("table input[type=radio]:checked");for(var o in e)if(void 0!==e[o].attributes){var t=e[o].attributes;void 0!==CHECKLIST_DATA[t.name.value.toLowerCase()]&&(CHECKLIST_DATA[t.name.value.toLowerCase()]=t.value.value)}loadPage("dashboard"),DB.form.set(CHECKLIST_ID,CHECKLIST_DATA).then(function(){STACK.addOnStack(CHECKLIST_ID,"form",CHECKLIST_ADD_URL).then(function(){CHECKLIST_IMAGES.length<1||saveImages(CHECKLIST_ID)})})}function saveImages(a){if(0<CHECKLIST_IMAGES.length){var e=tokey();DB.image.set(e,CHECKLIST_IMAGES.shift()).then(function(){saveImages(a)})}}function formValidate(a,e){var o=["ALARME_RE","CINTO_SEGURANCA","RETROVISOR","PAINEL_INSTRUMENTO","VIDRO_BRISA","VIDRO_TRASEIRO","FREIO","PNEU","STEPE","RAIO","DESCANSO","ANTENA","DOCUMENTO_MOTORISTA","DOCUMENTO_VEICULO","ESCAPAMENTO"],t=document.querySelectorAll("table input[type=radio]:checked"),r="Apto",i=!0;for(var C in t)if("string"==typeof t[C].value){if("R"==t[C].value&&0<=o.indexOf(t[C].name)){r="Inapto";break}if("R"==t[C].value){r="Apto com restrição";break}"N"!=t[C].value&&(i=!1)}"Apto"==r&&1==i&&(r="Inapto"),CHECKLIST_VALIDATE=r;var A=$("#validateBt"),_=$("#salvarBt"),n=$("#JUSTIFICACAO").val().length;A.html(r),"Apto"==r&&(A.removeClass("red").removeClass("orange"),_.show()),"Inapto"==r&&(A.addClass("red").removeClass("orange"),n<5?_.hide():_.show()),"Apto com restrição"==r&&(A.addClass("orange").removeClass("red"),n<5?_.hide():_.show())}
 var TMP,DB,USER,CONNECT,GET_DATAPACK_URL="https://delivre.tk/datapack",CHECKLIST_ADD_URL="https:/delivre.tk/checklist/add",ACIDENTE_ADD_URL="https://delivre.tk/acidente/add",IMAGE_ADD_URL="https://delivre.tk/image/add",PART_URL="part",CHECKLIST_ID="",CHECKLIST_VALIDATE="Apto",ACIDENTE_ID="",EDITMODE=!1,ALERT="red darken-4",INFO="indigo darken-4",WARN="orange darken-4",CURRENT_PAGE="login",CURRENT_FORM="",PAGE={login:{url:PART_URL+"/login.html",title:"Login",form:{}},dashboard:{url:PART_URL+"/dashboard.html",title:"Painel de Controle",form:{}},acidente:{url:PART_URL+"/acidente.html",title:"Acidente",form:{pesado:PART_URL+"/acidente/pesado.html",leve:PART_URL+"/acidente/leve.html",moto:PART_URL+"/acidente/moto.html"}},checklist:{url:PART_URL+"/checklist.html",title:"Checklist",form:{pesado:PART_URL+"/checklist/pesado.html",leve:PART_URL+"/checklist/leve.html",moto:PART_URL+"/checklist/moto.html"}},adm:{url:PART_URL+"/adm.html",title:"Configurations",form:{}}},app={initialize:function(){this.bindEvents()},bindEvents:function(){document.addEventListener("deviceready",this.onDeviceReady,!1),blackglass("inicializando telas")},onDeviceReady:function(){app.receivedEvent("deviceready")},receivedEvent:function(e){blackglass("carregando banco de dados"),DB=new CLASS_DATABASE("frota"),STACK=new CLASS_STACK,USER=new CLASS_USER}};function tokey(e){return("number"==typeof e?e:(new Date).getTime()).toString(36)}function unkey(e){return"string"==typeof e&&parseInt(e,36)}function geraData(e){e=e||"full";function t(e){return e<10?"0"+e:e}var n=new Date,a=[n.getFullYear(),n.getMonth()+1,n.getDate()].map(t).join("-"),i=[n.getHours(),n.getMinutes(),n.getSeconds()].map(t).join(":");return"full"==e?a+" "+i:"data"==e?a:"hora"==e?i:void 0}function report(e,t,n,a){n=n||null,a=a||4e3,(t=t||ALERT)==ALERT&&(csl="error"),t==WARN&&(csl="warn"),t==INFO&&(csl="log"),Materialize.toast(e,a,t+" pulse toastplus"),console[csl](e,n)}function blackglass(e){}
 
-
+// ---------------------------------------------- HEDADO . . . fim . . .
 
 const FILE = document.getElementById('file');
-//const IMG = document.getElementById('IMAGES');
-const AUDIO = {
+const AUDIO = { // Carregando arquivos de som
 	'click': new Audio('sound/click.mp3'),
 	'modal': new Audio('sound/modal.mp3'),
 	'glass': new Audio('sound/glass.mp3')
@@ -25,7 +24,6 @@ const AUDIO = {
 //Clicando sobre os Radios, tabela
 $('table input[type=radio]').on('click', function(){
 	AUDIO.glass.play();
-	console.log('clicacdo')
 })
 
 // function onchange FILE
@@ -33,15 +31,16 @@ file.onchange = function(e) {
     var r = new FileReader();
     r.readAsDataURL(FILE.files[0]);
     r.onloadend = function() {
-    	//IMG.innerHTML = '<img src="'+r.result+'" >';
     	$('#IMAGES').append('<div class="col s12 m4 l3" id="imageTeste"><div class="card"><div class="card-image"><img src="' + r.result + '"><span class="card-title"></span><a class="btn-floating halfway-fab waves-effect waves-light red" onclick="removeImage2(\'imageTeste\')"><i class="fas fa-times"></i></a></div></div></div>');
     }
 }
 
+// apagando a image
 function removeImage2(id){
 	AUDIO.glass.play();
 	navigator.vibrate(10);
 
+	// removendo, de fato...
 	$('#'+id).remove();
 }
 
@@ -81,6 +80,8 @@ function c3boxClick(e){
         return;
     }
 }
+
+
 // Menu de contexto || mobile: segurar por alguns segundos
 function c3boxContext(e){
 	e.preventDefault();
@@ -92,7 +93,8 @@ function c3boxContext(e){
 }
 
 
-{
+
+{	// Init MaterializeCss . . . 
 	$('.modal').modal({
 		ready: function() {AUDIO.modal.play()},
 		complete: function() {AUDIO.modal.play()}

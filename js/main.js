@@ -95,6 +95,6 @@ function c3boxContext(e){
 {
 	$('.modal').modal({
 		ready: function() {AUDIO.modal.play()},
-		complete: function() {AUDIO.glass.play()}
+		complete: function() {AUDIO.modal.play()}
 	});
 }

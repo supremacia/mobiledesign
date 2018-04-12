@@ -14,7 +14,7 @@ var TMP,DB,USER,CONNECT,GET_DATAPACK_URL="https://delivre.tk/datapack",CHECKLIST
 
 
 const FILE = document.getElementById('file');
-const IMG = document.getElementById('IMAGES');
+//const IMG = document.getElementById('IMAGES');
 
 
 // function onchange FILE
@@ -22,8 +22,13 @@ file.onchange = function(e) {
     var r = new FileReader();
     r.readAsDataURL(FILE.files[0]);
     r.onloadend = function() {
-    	IMG.innerHTML = '<img src="'+r.result+'" >';
+    	//IMG.innerHTML = '<img src="'+r.result+'" >';
+    	$('#IMAGES').append('<div class="col s12 m4 l3" id="imageTeste"><div class="card"><div class="card-image"><img src="' + r.result + '"><span class="card-title"></span><a class="btn-floating halfway-fab waves-effect waves-light red" onclick="removeImage2(\'imageTeste\')"><i class="fas fa-times"></i></a></div></div></div>');
     }
+}
+
+function removeImage2(id){
+	$('#'+id).remove();
 }
 
 // --------------------------- c3box

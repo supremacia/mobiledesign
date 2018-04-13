@@ -80,6 +80,26 @@ body {
     box-shadow: 0 1px 5px #080;
     background-image: radial-gradient(circle farthest-corner at 7px 6px , #fff 10%, #99ff00 50%, #5a0723 95%);
 }
+/* --------------------------- c3box Para anotações ----- */
+.c3box .note {
+    width: calc(100% - 30px);
+    display: inline-block;
+}
+.c3box .note img {
+    width: 100px;
+    float: left;
+}
+.c3box .note span {
+    margin: 0 0 0 110px;
+    display: block;
+    width: calc(100% - 120px);
+}
+
+
+
+
+
+
 
 /* --------------------------- EXTRA --- */
 #file {
@@ -97,3 +117,19 @@ div#imageTeste img {
     /* margin-top: 10px; */
     box-shadow: 1px 5px 30px rgba(0,0,0,.4);
 }}
+
+
+/*  ----- Para anotações ----- */
+.c3box .note {
+    width: calc(100% - 30px);
+    display: inline-block;
+}
+.c3box .note img {
+    width: 100px;
+    float: left;
+}
+.c3box .note span {
+    margin: 0 0 0 110px;
+    display: block;
+    width: calc(100% - 120px);
+}

@@ -9,8 +9,15 @@ body, html {
 	min-height: 100vh;
 	display: grid;
 	font-size: 15px;
+	background: #FFF;
 	color: rgba(0,0,0,.8);
 	text-shadow: 0 0 1px #FFF;
+}
+html {
+  background: #004455;
+}
+body {
+  display: none;
 }
 h1, h2, h3, h4, h5,h6 {
 	font-weight: 400;
@@ -123,41 +130,33 @@ form h2 {
 	margin: 10px 0;
 	min-width: 0;
 }
-.input input, 
-.input textarea, 
-.input button,
-.input select {
-	border: 1px solid #DDD;
+.input input, .input textarea, .input button, .input select, .divarea {
 	border-radius: 5px;
 	padding: 10px 0;
 	display: block;
 	width: 100%;
 	border: none;
-	border-bottom: 1px solid #009688;
+	border-bottom: 1px solid #CCC;
 	border-radius: 0;
-	font-size: 1em;
+	font-size: 1.2em;
 	margin: 0 0 10px 0;
 }
 .input label {
+	color: #000;
 	border:  none;
-	padding: 10px 0;
-	opacity: .5;
+	padding: 0;
+	opacity: .7;
+	font-size: .9em;
 }
 .input textarea {
-	height: 90px;
-    border: none;
-    font-family: roboto, sans-serif;
+	font-family: roboto, sans-serif;
 }
 input[type=file]{
 	border:none;
 }
 
 .input select {
-	border: none;
-	background: #EEE;
-	border: 1px solid #CCC;
 	cursor: pointer;
-	padding:  10px;
 }
 
 button, 

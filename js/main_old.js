@@ -1,7 +1,16 @@
 {
+    document.body.style.display = "grid";
 
     const FILE = document.getElementById('file');
     const IMG = document.getElementById('image');
+    var TMP;
+
+    $('#newstyle').on('submit', function(e) {
+        console.log(e);
+        e.preventDefault();
+        
+        TMP = e;
+    })
 
 
 

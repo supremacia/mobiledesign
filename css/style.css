@@ -13,7 +13,7 @@
 
  /* --------------------------- c3box --------------------------- */
 body {
-    background-color: #f9f9f9;
+    background: #f4f4f4;
 }
 .c3box {
     background: #fff;
@@ -44,7 +44,7 @@ body {
     font-size:1.2em;
     font-weight: bold;
     padding:0;
-    margin:-4px 0 3px 0;     
+    margin: 0px 0 3px 0;
 }
 
 .c3box span {
@@ -76,6 +76,10 @@ img + span {
 
 .c3box.disabled * {
 	color: #999;
+}
+.c3box.disabled {
+	box-shadow:  none;
+	border-color:#DDD;
 }
 .c3box.disabled img {
 	opacity: .3;

@@ -31,7 +31,7 @@ file.onchange = function(e) {
     var r = new FileReader();
     r.readAsDataURL(FILE.files[0]);
     r.onloadend = function() {
-    	$('#IMAGES').append('<div class="col s12 m4 l3" id="imageTeste"><div class="card"><div class="card-image"><img src="' + r.result + '"><span class="card-title"></span><a class="btn-floating halfway-fab waves-effect waves-light red" onclick="removeImage2(\'imageTeste\')"><i class="fas fa-times"></i></a></div></div></div>');
+    	$('#IMAGES').html('<div class="col s12 m4 l3" id="modal3cboximg"><div class="card"><div class="card-image"><img src="' + r.result + '"><span class="card-title"></span><a class="btn-floating halfway-fab waves-effect waves-light red" onclick="removeImage2(\'modal3cboximg\')"><i class="fas fa-times"></i></a></div></div></div>');
     }
 }
 
@@ -85,15 +85,48 @@ function c3boxClick(e){
     }
 }
 
+var C3BOXSEL = null;
 
 // Menu de contexto || mobile: segurar por alguns segundos
 function c3boxContext(e){
 	e.preventDefault();
-
+	
+	// Salvando objeto click para uso com o modal
 	var e = e.path[0].className.indexOf('c3box') == -1 ? e.path[1] : e.path[0];
+	C3BOXSEL = e;
 
+	// Copiando conteúdo para o MODAL ...
+	var img = e.querySelector('img');
+	var span = e.querySelector('span');
+	$("#modalc3boxtextarea").val(span.innerHTML);
+	if(img){
+		$('#IMAGES').html('<div class="col s12 m4 l3" id="modal3cboximg"><div class="card"><div class="card-image"><img src="' + img.src + '"><span class="card-title"></span><a class="btn-floating halfway-fab waves-effect waves-light red" onclick="removeImage2(\'modal3cboximg\')"><i class="fas fa-times"></i></a></div></div></div>');
+	}
+
+	// Abrindo o modal
 	$('#modal1').modal('open');
 	return false;
+}
+
+// Modal -> save comments
+function modalSave(){
+	console.log('Objeto: ', C3BOXSEL);
+		
+		// copiando a observação
+		var s = C3BOXSEL.querySelector('span');
+		$(s).html($("#modalc3boxtextarea").val());
+
+		// tratando imagens
+		var img = C3BOXSEL.querySelector('img');
+		if(img){
+			img.src = $("#IMAGES img").length > 0 ? $("#IMAGES img").attr('src') : img.remove();
+		} else if($("#IMAGES img").length > 0) {
+			$(s).before('<img src="'+$("#IMAGES img").attr('src')+'">');
+		}		
+
+		// limpando o modal ...
+		$("#IMAGES").html('');
+		$("#modalc3boxtextarea").val('');
 }
 
 

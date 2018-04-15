@@ -62,20 +62,24 @@ function c3boxClick(e){
 	AUDIO.click.play();
 
     var e = e.path[0].className.indexOf('c3box') == -1 ? e.path[1] : e.path[0];
-    var led = e.querySelector('input[type=hidden]');
+    var valor = e.querySelector('input[type=hidden]');
+    var label = e.querySelector('.label');
 
-    if(led.value == "N") {
-        led.value = "B";
+    if(valor.value == "N") {
+        valor.value = "B";
+        label.innerHTML = "Bom";
         e.className = 'c3box bom';
         return;
     }
-    if(led.value == "B") {
-        led.value = "R";
+    if(valor.value == "B") {
+        valor.value = "R";
+        label.innerHTML = "Ruim";
         e.className = 'c3box ruim';
         return;
     }
-    if(led.value == "R") {
-        led.value = "N";
+    if(valor.value == "R") {
+        valor.value = "N";
+        label.innerHTML = "";
         e.className = 'c3box disabled';
         return;
     }

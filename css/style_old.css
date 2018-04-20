@@ -85,7 +85,7 @@ table.chktable th {
     border-bottom: 1px solid #000;
 }
 table.chktable td {
-    padding: 10px;
+    padding: 15px 10px 7px 10px;
     border-bottom:1px solid #DDD;
 }
 table.chktable th:first-child,table.chktable td:first-child {

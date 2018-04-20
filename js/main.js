@@ -31,6 +31,8 @@ file.onchange = function(e) {
     var r = new FileReader();
     r.readAsDataURL(FILE.files[0]);
     r.onloadend = function() {
+    	console.log('Data:',r.result);
+
     	$('#IMAGES').html('<div class="col s12 m4 l3" id="modal3cboximg"><div class="card"><div class="card-image"><img src="' + r.result + '"><span class="card-title"></span><a class="btn-floating halfway-fab waves-effect waves-light red" onclick="removeImage2(\'modal3cboximg\')"><i class="fas fa-times"></i></a></div></div></div>');
     }
 }

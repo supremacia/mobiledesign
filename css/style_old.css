@@ -85,7 +85,7 @@ table.chktable th {
     border-bottom: 1px solid #000;
 }
 table.chktable td {
-    padding: 15px;
+    padding: 10px;
     border-bottom:1px solid #DDD;
 }
 table.chktable th:first-child,table.chktable td:first-child {
@@ -137,7 +137,7 @@ form h2 {
 	border: none;
 	border-bottom: 1px solid #CCC;
 	border-radius: 0;
-	font-size: 1.2em;
+	font-size: 1em;
 	margin: 0 0 10px 0;
 }
 .input label {

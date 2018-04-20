@@ -102,7 +102,6 @@ table.chktable td:first-child {
 table.chktable tr:last-child td {
     border:  none;
 }
-
 table.chktable input[type=radio] + label:before,
 table.chktable input[type=checkbox] +label:before {
     margin: 0;
@@ -142,11 +141,12 @@ form h2 {
 	margin: 0 0 10px 0;
 }
 .input label {
-	color: #000;
+	color: #045;
 	border:  none;
 	padding: 0;
 	opacity: .7;
 	font-size: .9em;
+  font-weight:  700;
 }
 .input textarea {
 	font-family: roboto, sans-serif;
